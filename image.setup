@@ -1,0 +1,19 @@
+clear
+echo "Preparing the new Ubuntu image for use..."
+echo
+
+# Remove MOTD and banners
+
+# Disable MOTD
+sed -i 's/ENABLED=1/ENABLED=0/g' /etc/default/motd-news
+
+# Remove banner files
+rm -f /etc/update-motd.d/00-header
+rm -f /etc/update-motd.d/50-motd-news
+rm -f /etc/update-motd.d/80-livepatch
+
+# Set colours
+
+
+# Fix login screen messages
+
