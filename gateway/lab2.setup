@@ -1,0 +1,26 @@
+clear
+echo "Configuring the Gateway as at the end of Lab 2..."
+echo
+
+# Enable IP forwarding in the kernel
+sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
+sysctl -p
+echo "> KERNEL: Enabled IP forwarding"
+
+# Enable POSTROUTING and NAT on the gateway
+iptables -t nat -A POSTROUTING -o enp0s3 -j MASQUERADE
+echo "> IPTABLES: Enabled NAT on the firewall"
+
+# Enable basic logging of all FORWARD chain traffic
+iptables -A FORWARD -i enp0s8 -j LOG --log-level 6
+echo "> IPTABLES: Enabled logging on the client interface"
+
+# Create gateway network configuration
+cp ~/config/50-cloud-init.yaml /etc/netplan/50-cloud-init.yaml
+netplan apply
+echo "> NETWORK: Network interfaces configured"
+echo
+
+echo "Done."
+echo
+
