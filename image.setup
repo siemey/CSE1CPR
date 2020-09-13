@@ -6,11 +6,15 @@ echo
 
 # Disable MOTD
 sed -i 's/ENABLED=1/ENABLED=0/g' /etc/default/motd-news
+echo "MOTD has been disabled..."
+echo
 
 # Remove banner files
 rm -f /etc/update-motd.d/00-header
 rm -f /etc/update-motd.d/50-motd-news
 rm -f /etc/update-motd.d/80-livepatch
+echo "Banner files have been deleted..."
+echo
 
 # Set colours
 if grep -Fxq "$LS_COLORS" ~/.bashrc
@@ -20,8 +24,15 @@ if grep -Fxq "$LS_COLORS" ~/.bashrc
     echo 'LS_COLORS=$LS_COLORS:'di=0;36' ; export LS_COLORS' >> ~/.bashrc
     echo "LS_COLORS: Colour changes made..."
 fi
-
+echo "UI colours have been fixed..."
+echo
 
 # Fix login screen messages
 sed -i 's/#kernel.printk/kernel.printk/g' /etc/sysctl.conf
 sysctl -p
+echo "Kernel messages supressed from login screen..."
+echo
+
+echo "Done!"
+echo
+
