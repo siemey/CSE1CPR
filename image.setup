@@ -16,4 +16,5 @@ rm -f /etc/update-motd.d/80-livepatch
 
 
 # Fix login screen messages
-
+sed -i 's/#kernel.printk/kernel.printk/g' /etc/sysctl.conf
+sysctl -p
