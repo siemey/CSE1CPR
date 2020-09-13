@@ -25,9 +25,16 @@ ip addr flush enp0s9
 echo "> NETWORK: Default network configuration applied"
 echo
 
-#Reset IP forwarding
-sed -i 's/net.ipv4.ip_forward=1/#net.ipv4.ip_forward=1/g' /etc/sysctl.conf
-sysctl -p
+#Reset IP forwarding (check first to avoid double '##')
+if grep -Fxq "#net.ipv4.ip_forward=1" /etc/sysctl.conf
+  then
+    echo "SYSCTL: IP forwarding already reset"
+  else
+    sed -i 's/net.ipv4.ip_forward=1/#net.ipv4.ip_forward=1/g' /etc/sysctl.conf
+    sysctl -p
+    echo "> STSCTL: IP forwarding reset"
+fi
+echo
 
-echo "> STSCTL: IP forwarding reset"
+echo "Done."
 echo
