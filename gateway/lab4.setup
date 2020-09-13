@@ -1,0 +1,21 @@
+echo "Creating iptables rules from the end of lab 4"
+echo
+
+# Allow the webserver to contact the Internet
+iptables -I FORWARD 10 -i enp0s9 -p tcp --dport 443 -j ACCEPT
+iptables -I FORWARD 10 -i enp0s9 -p tcp --dport 80 -j ACCEPT
+iptables -I FORWARD 10 -i enp0s9 -p udp --dport 53 -j ACCEPT
+
+echo "Webserver has access to the Internet..."
+echo
+
+# Enable stateful return traffic from the webserver to the client
+iptables -I FORWARD 13 -i enp0s9 -p tcp --sport 80 -m state --state ESTABLISHED -j ACCEPT
+iptables -I FORWARD 13 -i enp0s9 -p tcp --sport 443 -m state --state ESTABLISHED -j ACCEPT
+iptables -I FORWARD 13 -i enp0s9 -p icmp -m state --state NEW,ESTABLISHED -j ACCEPT
+iptables -I FORWARD 13 -i enp0s9 -p udp --sport 53 -m state --state ESTABLISHED -j ACCEPT
+
+echo "Client has access to the webserver..."
+echo
+echo "Done!"
+echo
