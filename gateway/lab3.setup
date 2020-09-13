@@ -1,0 +1,41 @@
+echo "Creating the rules from the end of Lab 2..."
+
+# Flush current rules and chains
+iptables -F
+iptables -X
+
+# Create a 'log all' rule at the start
+iptables -A FORWARD -j LOG --log-level 6
+
+# Create LOG_DROP chain and configure
+iptables -N LOG_DROP
+iptables -A LOG_DROP -j LOG --log-level 6
+iptables -A LOG_DROP -j DROP
+
+# Enable ICMP across all interfaces
+iptables -A FORWARD -i enp0s3 -p icmp -m state --state ESTABLISHED -j ACCEPT
+iptables -A FORWARD -i enp0s8 -p icmp -j ACCEPT
+iptables -A FORWARD -i enp0s9 -p icmp -j ACCEPT
+
+# Enable DNS from all zones to the Internet
+iptables -A FORWARD -i enp0s3 -p udp -m state --state ESTABLISHED -j ACCEPT
+iptables -A FORWARD -i enp0s8 -p udp --dport 53 -j ACCEPT
+iptables -A FORWARD -i enp0s9 -p udp --dport 53 -j ACCEPT
+
+# Enable HTTP/S outbound from all zones
+iptables -A FORWARD -i enp0s8 -p tcp --dport 80 -j ACCEPT
+iptables -A FORWARD -i enp0s8 -p tcp --dport 443 -j ACCEPT
+iptables -A FORWARD -i enp0s9 -p tcp --dport 80 -j ACCEPT
+iptables -A FORWARD -i enp0s9 -p tcp --dport 443 -j ACCEPT
+
+# Enable return HTTP/S traffic only from Internet and DMZ
+iptables -A FORWARD -i enp0s3 -p tcp --sport 80 -m state --state ESTABLISHED -j ACCEPT
+iptables -A FORWARD -i enp0s3 -p tcp --sport 443 -m state --state ESTABLISHED -j ACCEPT
+iptables -A FORWARD -i enp0s9 -p tcp --sport 80 -m state --state ESTABLISHED -j ACCEPT
+iptables -A FORWARD -i enp0s9 -p tcp --sport 443 -m state --state ESTABLISHED -j ACCEPT
+
+# Deny all rule to finish
+iptables -A FORWARD -j LOG_DROP
+
+
+echo "Done."
