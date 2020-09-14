@@ -13,7 +13,7 @@ echo
 rm -f /etc/update-motd.d/10-help-text
 rm -f /etc/update-motd.d/50-motd-news
 rm -f /etc/update-motd.d/80-livepatch
-echo "MOTD:" Banner files have been deleted..."
+echo "MOTD: Banner files have been deleted..."
 echo
 
 # Set colours
