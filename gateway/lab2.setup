@@ -1,3 +1,4 @@
+#!/bin/bash
 clear
 echo "Configuring the Gateway as at the end of Lab 2..."
 echo
