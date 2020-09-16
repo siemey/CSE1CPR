@@ -1,3 +1,5 @@
+#!/bin/bash
+clear
 echo "Creating iptables rules from the end of lab 4"
 echo
 
