@@ -1,3 +1,4 @@
+#!/bin/bash
 clear
 echo "Preparing the new Ubuntu image for use..."
 echo
