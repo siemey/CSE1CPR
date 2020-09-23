@@ -17,7 +17,7 @@ iptables -A FORWARD -i enp0s8 -j LOG --log-level 6
 echo "> IPTABLES: Enabled logging on the client interface"
 
 # Create gateway network configuration
-cp ~/config/01-netcfg.yaml /etc/netplan/01-netcfg.yaml
+cp ~/config/gateway/01-netcfg.yaml /etc/netplan/01-netcfg.yaml
 netplan apply
 echo "> NETWORK: Network interfaces configured"
 echo
