@@ -18,7 +18,7 @@ echo "> IPTABLES: Flushed all existing chains and rules"
 echo "> IPTABLES: Default chains recreated"
 
 # Reset network configuration
-cp ~/config/gateway/one-adapter-reset.yaml /etc/netplan/50-cloud-init.yaml
+cp ~/config/gateway/adapter-reset.yaml /etc/netplan/01-netcfg.yaml
 netplan apply
 ip addr flush enp0s8
 ip addr flush enp0s9
