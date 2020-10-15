@@ -15,7 +15,7 @@ Introduction
 
 [Lab 1: Introduction to Linux](lab1-intro.md)
 
-Lab 2
+[Lab 2: Setting up the lab environment](lab2-gateway.md) 
 
 Lab 3
 
