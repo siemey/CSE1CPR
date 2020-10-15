@@ -10,6 +10,23 @@ Welcome to the repository for student resources that will be used in the practic
 - Scripts containing commands to build, configure and reset the lab environment
 - Reference material for common tasks performed within  the lab environment
 
+### Contents
+
+Introduction
+[Lab 1: INtroduction to Linux](lab1-intro.md)
+Lab 2
+Lab 3
+Lab 4
+Lab 5
+Lab 6
+Lab 7
+Lab 8
+
+Reference material
+Installing Virtual Box
+Setting up virtual machines in Virtual Box
+General Linux reference 
+
 
 
 [page 1](page1.md)
