@@ -1,5 +1,5 @@
-## CSE1CPR (Cybersecurity in Practice)
-##### LaTrobe University | Bachelor of Cybersecurity
+# CSE1CPR (Cybersecurity in Practice)
+#### LaTrobe University | Bachelor of Cybersecurity
 ###### Last Update: 15th October 2020  
 
 ---
