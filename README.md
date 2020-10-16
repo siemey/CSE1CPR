@@ -11,9 +11,9 @@ Welcome to the repository for student resources that will be used in the practic
 
 ### Contents
 
-Introduction
+[Introduction](intro.md)
 
-[Lab 1: Introduction to Linux](lab1-intro.md)
+[Lab 1: Introduction to Linux](lab1-linux.md)
 
 [Lab 2: Setting up the lab environment](lab2-gateway.md) 
 
