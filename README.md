@@ -10,13 +10,15 @@ Cyber security is a broad discipline covering policy, technology and business pr
 
 In this subject we will perform many practical exercises within a personal experimentation or ‘test lab’ environment. In this first practical exercise we will build and configure your core test lab using several technologies that are commonly utilised by security practitioners. Over the coming weeks we will use these core components to test and understand various security controls and operational topics. We will add components to the lab as we go, to allow us to explore all the cyber security topics covered in this subject.
 
+### Contents
+
 In this repository you will find the following:
 
 - Lab worksheets including practical lessons and exercises or CSE1CPR
 - Scripts containing commands to build, configure and reset the CSE1CPR lab environment
 - Reference material for common tasks performed within the CSE1CPR lab environment
 
-### Contents
+### Where to from here?
 
 [Introduction](intro.md)
 
