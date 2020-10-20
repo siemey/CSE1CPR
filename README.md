@@ -6,9 +6,11 @@
 
 ### Background
 
-Cyber security is a broad discipline covering policy, technology and business processes. Many of the fundamental cyber security concepts rely on a sound understanding of information technology. As a security practitioner, it is useful to be able to implement a security threat or control environment as a set of running machines. This allows you to fully understand the underpinning technical concepts, as well as to experiment with various scenarios.
+This is a repository of practical lab worksheets, exercises and files to support the learning cirriculum of the first year cyber security subject **Cybersecurity in Practice**. 
 
-In this subject we will perform many practical exercises within a personal experimentation or ‘test lab’ environment. In this first practical exercise we will build and configure your core test lab using several technologies that are commonly utilised by security practitioners. Over the coming weeks we will use these core components to test and understand various security controls and operational topics. We will add components to the lab as we go, to allow us to explore all the cyber security topics covered in this subject.
+The links below will take you to the pages describing the work required for each practical lab. Each lab contains a set of learning objectives and a series of guided exercises for you to follow. After each exercise there are questions to test your knowledge of the current topic. 
+
+The lab environment consists mainly of **Linux virtual machines** that you will run yourself. Some additional information is supplied to guide you through the installation and setup of the **Oracle Virtual Box** virtual machine environment. This software is free and can be installed and run on your home PC, but please note that you will need to have enough computing power and free memory and hard disk space in order to successfully complete the labs. This will be explained in more detail as the labs progress. 
 
 ### Contents
 
@@ -19,6 +21,8 @@ In this repository you will find the following:
 - Reference material for common tasks performed within the CSE1CPR lab environment
 
 ### Where to from here?
+
+The links below will take you to the online worksheets for each lab. If you are new to the subject, please start with the Introduction page. 
 
 [Introduction](intro.md)
 
