@@ -24,32 +24,22 @@ In this repository you will find the following:
 
 The links below will take you to the online worksheets for each lab. If you are new to the subject, please start with the Introduction page. 
 
-[Introduction](intro.md)
+* [Introduction](intro.md)
+* [Lab 1: Introduction to Linux](lab1-linux.md)
+* [Lab 2: Setting up the lab environment](lab2-gateway.md) 
+* Lab 3
+* Lab 4
+* Lab 5
+* Lab 6
+* Lab 7
+* Lab 8
 
-[Lab 1: Introduction to Linux](lab1-linux.md)
+### Reference material
 
-[Lab 2: Setting up the lab environment](lab2-gateway.md) 
-
-Lab 3
-
-Lab 4
-
-Lab 5
-
-Lab 6
-
-Lab 7
-
-Lab 8
-
-Reference material
-
-Installing Virtual Box
-
-Setting up virtual machines in Virtual Box
-
-General Linux reference 
-
+* Installing Virtual Box
+* Setting up virtual machines in Virtual Box
+* General Linux reference 
+* Lab topology diagram
 
 
 
